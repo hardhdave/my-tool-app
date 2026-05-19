@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { heroContent } from "@/lib/site-data";
 import { FloatingParticles } from "@/components/ui/floating-particles";
+import { Linkedin, Instagram, Facebook } from "lucide-react";
 
 function TypewriterText({ text, delay = 0, className = "" }: { text: string; delay?: number; className?: string }) {
   const [displayed, setDisplayed] = useState("");
@@ -107,8 +108,8 @@ export function HeroSection() {
                   <motion.span
                     className="text-transparent bg-clip-text"
                     style={{
-                      backgroundImage: "linear-gradient(135deg, #5ba4e6, #1a9aaa, #e8b830)",
-                      backgroundSize: "200% 200%"
+                      backgroundImage: "linear-gradient(135deg, #FFD700, #FF8C00, #FF6347, #FFD700)",
+                      backgroundSize: "300% 300%"
                     }}
                     animate={{
                       backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
@@ -163,6 +164,42 @@ export function HeroSection() {
                 </motion.span>
               </a>
             </motion.div>
+
+            {/* Social Media Links */}
+            <motion.div
+              className="mt-10 flex items-center gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 3.6 }}
+            >
+              <div className="h-px w-8 sm:w-12 bg-white/30 mr-2" />
+              <a
+                href="https://www.linkedin.com/in/komal-tiwari-36230266?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transition-all duration-300 hover:bg-[#0077b5] hover:border-[#0077b5] hover:scale-110 shadow-lg"
+              >
+                <Linkedin className="w-4 h-4 fill-current" />
+              </a>
+              <a
+                href="https://www.instagram.com/pranil_education_services_llp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transition-all duration-300 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:border-transparent hover:scale-110 shadow-lg"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.facebook.com/share/1FNPPMhovh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transition-all duration-300 hover:bg-[#1877F2] hover:border-[#1877F2] hover:scale-110 shadow-lg"
+              >
+                <Facebook className="w-5 h-5 fill-current" />
+              </a>
+              <div className="h-px w-8 sm:w-12 bg-white/30 ml-2" />
+            </motion.div>
+
           </div>
         </div>
       </motion.div>

@@ -6,7 +6,7 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { CompaniesSection } from "@/components/sections/companies-section";
 import { ValuesSection } from "@/components/sections/values-section";
 import { VisionSection } from "@/components/sections/vision-section";
-import { NewsSection } from "@/components/sections/news-section";
+import { GallerySection } from "@/components/sections/gallery-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { ContactSection } from "@/components/sections/contact-section";
@@ -55,7 +55,7 @@ export function HomeClient() {
           className="relative z-[5] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-white shadow-[0_-8px_40px_rgba(0,0,0,0.08)]"
           style={{ willChange: "transform" }}
         >
-          <NewsSection />
+          <GallerySection />
         </section>
 
         <section
@@ -83,3 +83,4 @@ export function HomeClient() {
     </>
   );
 }
+

@@ -20,6 +20,12 @@ export interface CompanyPageData {
   ctaDescription: string;
   phone: string;
   email: string;
+  blog?: {
+    title: string;
+    sections: { heading: string; paragraphs: string[] }[];
+    author: string;
+    authorRole: string;
+  };
 }
 
 export const companyPages: Record<string, CompanyPageData> = {
@@ -109,25 +115,22 @@ export const companyPages: Record<string, CompanyPageData> = {
     accentColor: "#22c55e",
     heroImage: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2000&q=90",
     heroTitle: "Connecting Talent with Opportunity",
-    heroSubtitle: "Free job placement support, corporate training, and career development services. We bridge the gap between skilled professionals and leading companies.",
+    heroSubtitle: "Professional staffing solutions with the vision to provide right talent for dream jobs. Serving Education, BPO, KPO, Finance, Banking, Healthcare, IT and Non-IT sectors.",
     about: {
       title: "About PRANIL Recruitment Services",
       paragraphs: [
-        "PRANIL Recruitment Services (PRS) is a leading HR consultancy dedicated to connecting talented professionals with the right career opportunities - completely free of charge.",
-        "We partner with multinational companies, startups, and established businesses across India and abroad to source, screen, and place the best talent.",
-        "With a track record of 200+ successful placements per quarter, we specialize in IT, manufacturing, healthcare, hospitality, finance, and engineering."
+        "We are pleased to introduce our PRANIL RECRUITMENT SERVICES Professionals Team who diligently provide staffing solutions with the vision to provide right talent for getting their dream job aligning with the organization expectations and norms.",
+        "For the proficiency utilizing in prominent sectors such as Education, BPO, KPO, Finance, Banking, Healthcare, IT and Non-IT Sector, we gratefully invite you for better business relations assuring growth for the future.",
+        "Our dedicated team of recruitment specialists ensures a seamless hiring process, matching skilled professionals with the right opportunities while maintaining the highest standards of quality and professionalism."
       ],
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
     },
     services: [
-      { title: "Free Job Placement", description: "100% free placement support for candidates. We connect you with verified employers matching your skills.", icon: "UserRoundCheck" },
-      { title: "Corporate Training", description: "Customized training programs covering leadership, communication, technical skills, and team development.", icon: "Building2" },
-      { title: "Resume Building", description: "Professionally crafted resumes highlighting your strengths and presenting you in an employer-ready format.", icon: "ScrollText" },
-      { title: "Interview Preparation", description: "One-on-one interview coaching covering common questions, communication techniques, and confidence building.", icon: "Sparkles" },
-      { title: "Campus Recruitment", description: "End-to-end campus hiring solutions for colleges and universities with pre-screening and placement drives.", icon: "GraduationCap" },
-      { title: "Executive Search", description: "Specialized headhunting for senior and C-level positions with confidential, targeted candidate sourcing.", icon: "Search" },
-      { title: "HR Consulting", description: "Complete HR solutions including policy development, compliance, payroll structuring, and workforce planning.", icon: "BriefcaseBusiness" },
-      { title: "Skill Assessment", description: "Comprehensive skill testing and assessment tools to identify candidate strengths and areas for improvement.", icon: "BarChart3" }
+      { title: "Recruitment", description: "End-to-end recruitment solutions connecting talented professionals with the right career opportunities across Education, BPO, KPO, Finance, Banking, Healthcare, IT and Non-IT sectors.", icon: "UserRoundCheck" },
+      { title: "Permanent Staffing", description: "Long-term staffing solutions to help organizations find the right talent for permanent positions, ensuring alignment with company culture and expectations.", icon: "Building2" },
+      { title: "Temporary Staffing", description: "Flexible temporary staffing services to meet short-term business needs, project-based requirements, and seasonal demands with qualified professionals.", icon: "BriefcaseBusiness" },
+      { title: "Resume Update", description: "Professional resume enhancement services to highlight your strengths, achievements, and skills in an employer-ready format that stands out.", icon: "ScrollText" },
+      { title: "Interview Preparation", description: "One-on-one interview coaching covering common questions, communication techniques, confidence building, and presentation skills.", icon: "Sparkles" }
     ],
     process: [
       { step: "Register With Us", description: "Submit your profile and resume - completely free, no hidden charges." },
@@ -251,80 +254,124 @@ export const companyPages: Record<string, CompanyPageData> = {
     email: "travel@pranilgroup.com"
   },
 
-  "it-services": {
-    slug: "it-services",
-    name: "IT Services",
-    fullName: "PRANIL IT Solutions",
-    tagline: "Digital Innovation for Growth",
-    logoUrl: null,
-    color: "#6B21A8",
-    accentColor: "#a855f7",
-    heroImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=90",
-    heroTitle: "Digital Innovation for Growth",
-    heroSubtitle: "Web development, mobile apps, UI/UX design, SEO, and digital marketing solutions to transform your business.",
+  "digital-media": {
+    slug: "digital-media",
+    name: "Digital Media",
+    fullName: "KARV Digital Media & Event Solutions",
+    tagline: "We Don't Just Market — We Build Legacies",
+    logoUrl: "/logos/karv-logo.jpg",
+    color: "#0077B6",
+    accentColor: "#00B4D8",
+    heroImage: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=2000&q=90",
+    heroTitle: "Transforming Brands with Creative Digital Solutions",
+    heroSubtitle: "Expert website development, social media management, branding, lead generation & event solutions. We craft digital experiences that elevate your brand's presence and drive meaningful engagement.",
     about: {
-      title: "About PRANIL IT Solutions",
+      title: "About KARV Digital Media & Event Solutions",
       paragraphs: [
-        "PRANIL IT Solutions is the technology arm of PRANIL Group, delivering cutting-edge digital solutions to businesses of all sizes.",
-        "We combine creativity with technical excellence to build websites, mobile applications, and digital marketing strategies that drive results.",
-        "From custom web applications to SEO optimization, we offer a complete suite of IT services to help your business thrive digitally."
+        "KARV Digital Media & Event Solutions delivers expert website development, social media management, and branding services. We craft creative digital solutions to enhance your brand's presence and engagement.",
+        "Our team ensures innovation, strategy, and precision in every project. We empower businesses with tailored digital solutions, seamlessly blending creativity and technology to elevate brand visibility, engagement, and growth.",
+        "Through data-driven strategies and innovative storytelling, we help brands stand out in a competitive digital world. At KARV, we turn ideas into influence and businesses into industry leaders. Let's build your digital success together!"
       ],
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=1200&q=80"
     },
     services: [
-      { title: "Web Development", description: "Custom websites and web applications built with React, Next.js, and Node.js.", icon: "Code" },
-      { title: "Mobile App Development", description: "Native and cross-platform mobile applications for iOS and Android.", icon: "Smartphone" },
-      { title: "UI/UX Design", description: "User-centered design combining aesthetics with functionality. Wireframes and prototypes.", icon: "Palette" },
-      { title: "SEO Optimization", description: "Data-driven SEO strategies to improve search rankings and boost online visibility.", icon: "Search" },
-      { title: "Digital Marketing", description: "Social media, PPC, content marketing, and email campaigns for business growth.", icon: "TrendingUp" },
-      { title: "E-Commerce Solutions", description: "Full-featured online stores with payment integration and conversion optimization.", icon: "Monitor" },
-      { title: "Database Management", description: "Scalable database design, migration, optimization, and cloud hosting solutions.", icon: "Database" },
-      { title: "IT Consulting", description: "Strategic technology consulting to align IT infrastructure with business goals.", icon: "BarChart3" }
+      { title: "Flyer Design", description: "Eye-catching, professionally designed flyers that captivate your audience and leave a lasting impression. Whether for promotions, events, or branding, we create designs that speak for your business.", icon: "Palette" },
+      { title: "Carousel Design", description: "Creative and interactive carousel designs for social media, designed to capture attention and boost engagement with visually appealing content.", icon: "Monitor" },
+      { title: "Videos & Reels", description: "High-quality edited and promotional videos that captivate audiences and elevate your brand. From seamless editing to dynamic visuals and storytelling, our videos engage, inform, and drive action.", icon: "TrendingUp" },
+      { title: "Animated Reels", description: "Captivating animated reels that bring your brand to life with dynamic motion graphics, engaging storytelling, and vibrant visuals. From smooth transitions to trendy effects and compelling messaging.", icon: "Sparkles" },
+      { title: "Web Development", description: "High-performing websites with stunning visuals, seamless functionality, user-friendly experiences, responsive layouts, fast loading speeds, and SEO optimization.", icon: "Code" },
+      { title: "Lead Generation", description: "Result-driven lead generation services using data-driven strategies, targeted marketing, and optimized funnels to attract, engage, and convert potential customers.", icon: "TrendingUp" },
+      { title: "SEO Services", description: "Data-driven SEO strategies to improve search rankings, boost online visibility, and drive organic traffic to your business.", icon: "Search" },
+      { title: "Social Media Management", description: "Complete social media management including content creation, scheduling, analytics, and community engagement to grow your brand's digital presence.", icon: "Globe" }
     ],
     process: [
-      { step: "Discovery Call", description: "We understand your business, goals, challenges, and vision for the project." },
-      { step: "Strategy & Planning", description: "Detailed project roadmap with timelines, milestones, and technology stack selection." },
-      { step: "Design & Prototype", description: "UI/UX design, wireframes, and interactive prototypes for your approval." },
-      { step: "Development", description: "Agile development with regular updates, code reviews, and quality assurance." },
-      { step: "Testing & Launch", description: "Thorough testing, performance optimization, and smooth deployment." },
-      { step: "Support & Growth", description: "Post-launch maintenance, analytics tracking, and continuous improvement." }
+      { step: "Concept & Strategy", description: "We understand your brand, goals, target audience, and create a tailored digital strategy." },
+      { step: "Scripting & Storyboarding", description: "Detailed planning with scripts, storyboards, and creative direction for every project." },
+      { step: "Design & Animation", description: "Creating stunning visuals, motion graphics, and eye-catching designs that captivate." },
+      { step: "Audio & Sound Design", description: "Professional audio integration with music selection, sound effects, and voiceovers." },
+      { step: "Branding & Final Touches", description: "Adding brand elements, final refinements, and quality assurance for a polished result." },
+      { step: "Review & Delivery", description: "Client review, revisions, and final delivery with optimized formats for all platforms." }
     ],
     stats: [
-      { value: 100, suffix: "+", label: "Projects Delivered" },
-      { value: 50, suffix: "+", label: "Happy Clients" },
-      { value: 99, suffix: "%", label: "Client Retention" },
-      { value: 15, suffix: "+", label: "Tech Experts" }
+      { value: 50, suffix: "+", label: "Clients Served" },
+      { value: 200, suffix: "+", label: "Projects Delivered" },
+      { value: 100, suffix: "%", label: "Client Satisfaction" },
+      { value: 5, suffix: "+", label: "Industries Covered" }
     ],
     whyChoose: {
-      title: "Why Choose PRANIL IT Solutions?",
+      title: "Why Choose KARV Digital Media?",
       points: [
-        "Modern tech stack - React, Next.js, Node.js, Python",
-        "100+ projects delivered across multiple industries",
-        "Agile development with transparent communication",
-        "Dedicated project manager for every engagement",
-        "Pixel-perfect designs with mobile-first approach",
-        "Post-launch support and maintenance included",
-        "Competitive pricing with no hidden costs",
-        "SEO and performance optimization built-in"
+        "Elevate your brand with powerful digital strategies that enhance visibility, credibility, and impact",
+        "Drive unstoppable growth with targeted marketing and high-converting lead generation",
+        "Build meaningful engagement with compelling content and interactive campaigns",
+        "Maximize ROI with smart, data-backed strategies for the best possible returns",
+        "Comprehensive digital services from flyer design to web development",
+        "Creative excellence with innovation at our core",
+        "Strategic campaigns that deliver measurable results",
+        "End-to-end event solutions ensuring seamless planning and digital presence"
       ]
     },
     gallery: [
-      { image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80", caption: "Development" },
-      { image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=80", caption: "Design" },
-      { image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80", caption: "Analytics" },
-      { image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80", caption: "Teamwork" },
-      { image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80", caption: "Data" },
-      { image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80", caption: "Code" }
+      { image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80", caption: "Social Media" },
+      { image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=80", caption: "Graphic Design" },
+      { image: "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80", caption: "Video Production" },
+      { image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80", caption: "Lead Generation" },
+      { image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80", caption: "Web Development" },
+      { image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80", caption: "SEO & Analytics" }
     ],
     testimonials: [
-      { quote: "PRANIL IT built our website from scratch. The design, speed, and SEO results exceeded expectations.", name: "Rajesh Patel", role: "E-commerce Client" },
-      { quote: "Their mobile app development team is outstanding. The app is smooth and our users love it.", name: "Sneha Mehta", role: "Startup Founder" },
-      { quote: "Professional, on-time, and within budget. PRANIL IT is our go-to technology partner.", name: "Amit Shah", role: "Business Owner" }
+      { quote: "KARV created impactful flyers, engaging videos, and dynamic reels for Pranil Education Services, showcasing our educational offerings with creativity and clarity.", name: "Pranil Education Services", role: "Client — Education" },
+      { quote: "KARV created captivating flyers, engaging videos, and dynamic reels for Pranil Tours and Travels, showcasing unforgettable travel experiences with inspiring storytelling.", name: "Pranil Tours & Travels", role: "Client — Travel" },
+      { quote: "Through strategic digital content, KARV helped enhance our brand visibility, attract customers, and build a strong digital presence with measurable results.", name: "KARV Client", role: "Digital Marketing" }
     ],
-    ctaTitle: "Let's Build Something Amazing",
-    ctaDescription: "Get a free project consultation and quote. Transform your business with cutting-edge digital solutions.",
+    blog: {
+      title: "From Ahmedabad to the World: Building Global Careers with Trust and Transparency",
+      author: "Komal Tiwari",
+      authorRole: "Director of Pranil Education Services LLP",
+      sections: [
+        {
+          heading: "The True Cost of 'Free' Advice",
+          paragraphs: [
+            "We have met many students who came to us after their visas were rejected. When we look at their cases, the reason is rarely a lack of ability or funds. It is usually poor decisions made at the wrong time.",
+            "Some of the most common mistakes include trusting unauthorized or inexperienced agents, believing in 'guaranteed visa' promises, choosing the wrong courses just for quick approval, ignoring proper financial planning, and submitting incomplete or incorrect documents.",
+            "These mistakes can cost not just money—but also time, confidence, and future opportunities. In many cases, they delay dreams that could have been achieved with the right guidance."
+          ]
+        },
+        {
+          heading: "Our Approach: Honest Guidance Over False Promises",
+          paragraphs: [
+            "We follow a very simple rule: If it is not right for you, we will not suggest it. This sometimes means saying 'no' to clients, even when it may seem like a lost opportunity in the short term. But in the long run, this approach protects their future and builds trust that lasts.",
+            "Our process includes detailed profile analysis, clear explanation of risks and opportunities, step-by-step documentation support, and continuous communication and updates.",
+            "We don't believe in creating pressure—we believe in building clarity. When people understand the process, they make better decisions."
+          ]
+        },
+        {
+          heading: "A Woman Entrepreneur's Journey",
+          paragraphs: [
+            "As a woman entrepreneur managing multiple businesses—education, recruitment, travel, and digital media—the journey has not been easy. There have been moments of uncertainty, financial challenges, and situations that tested both patience and resilience.",
+            "However, these experiences have also shaped a deeper understanding of people's struggles. Today, when clients walk in feeling confused or stressed, I don't just see them as customers—I understand their situation, their pressure, and the expectations they carry. And that perspective makes all the difference in how we guide them."
+          ]
+        },
+        {
+          heading: "Ahmedabad's Youth: Full of Potential",
+          paragraphs: [
+            "Ahmedabad has incredible talent. The youth here are hardworking, ambitious, and eager to explore global opportunities. They have the ability to compete internationally, but often lack the right direction and guidance.",
+            "What they truly need is the right direction, genuine opportunities, transparent guidance, and emotional support during the process. With the right approach, Ahmedabad has the potential to become a strong contributor to the global workforce."
+          ]
+        },
+        {
+          heading: "A Message to Every Dreamer",
+          paragraphs: [
+            "If you are planning to study or work abroad, remember this: Don't rush decisions, don't fall for shortcuts, don't trust blindly, ask questions and understand the process, choose long-term success over quick results.",
+            "Your journey is important—treat it with care and responsibility."
+          ]
+        }
+      ]
+    },
+    ctaTitle: "Elevate Your Brand Today",
+    ctaDescription: "Transform your brand with cutting-edge digital media, creative designs, and result-driven marketing strategies. At KARV, we don't just market — we build legacies.",
     phone: "+91 73839 97679",
-    email: "it@pranilgroup.com"
+    email: "info@karvdigital.com"
   }
 };
 

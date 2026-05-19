@@ -24,7 +24,7 @@ export const navItems = [
   { label: "About Us", href: "#about" },
   { label: "Our Companies", href: "#companies" },
   { label: "Our Vision", href: "#vision" },
-  { label: "News & Events", href: "#news" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Contact Us", href: "#contact" }
 ];
 
@@ -94,12 +94,12 @@ export const companies = [
     color: "#0052CC"
   },
   {
-    name: "IT Services",
-    slug: "it-services",
-    fullName: "PRANIL IT Solutions",
-    tagline: "Digital Innovation for Growth",
-    logoUrl: null,
-    color: "#6B21A8"
+    name: "Digital Media",
+    slug: "digital-media",
+    fullName: "KARV Digital Media & Event Solutions",
+    tagline: "We Don't Just Market — We Build Legacies",
+    logoUrl: "/logos/karv-logo.jpg",
+    color: "#0077B6"
   }
 ];
 
@@ -311,28 +311,34 @@ export const processSteps = [
 
 export const recruitmentPoints = [
   {
-    label: "Corporate Training",
-    icon: Building2,
+    label: "Recruitment",
+    icon: UserRoundCheck,
     description:
-      "Enhance your professional skills with customized corporate training sessions focused on leadership, communication, and technical abilities."
+      "End-to-end recruitment solutions connecting talented professionals with career opportunities across Education, BPO, KPO, Finance, Banking, Healthcare, IT and Non-IT sectors."
   },
   {
-    label: "Resume Building",
+    label: "Permanent Staffing",
+    icon: Building2,
+    description:
+      "Long-term staffing solutions to help organizations find the right talent for permanent positions, ensuring alignment with company culture."
+  },
+  {
+    label: "Temporary Staffing",
+    icon: BriefcaseBusiness,
+    description:
+      "Flexible temporary staffing services to meet short-term business needs, project-based requirements, and seasonal demands."
+  },
+  {
+    label: "Resume Update",
     icon: ScrollText,
     description:
-      "Professionally crafted resumes that highlight strengths, achievements, and employer-ready presentation."
+      "Professional resume enhancement services to highlight your strengths, achievements, and skills in an employer-ready format."
   },
   {
     label: "Interview Preparation",
     icon: Sparkles,
     description:
-      "One-on-one interview coaching covering common questions, communication techniques, and presentation skills."
-  },
-  {
-    label: "Job Without Any Charges",
-    icon: ShieldCheck,
-    description:
-      "Free job placement support connecting candidates with opportunities that match their skills and career goals."
+      "One-on-one interview coaching covering common questions, communication techniques, confidence building, and presentation skills."
   }
 ];
 
@@ -468,6 +474,13 @@ export const companyContacts = [
     logoUrl: "/logos/travel-logo.png",
     phone: "+91 73833 69769",
     email: "Tours, tickets, visas and packages"
+  },
+  {
+    label: "KARV Digital Media",
+    short: "KARV",
+    logoUrl: "/logos/karv-logo.jpg",
+    phone: "+91 73839 97679",
+    email: "info@karvdigital.com"
   }
 ];
 

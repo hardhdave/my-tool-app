@@ -152,33 +152,43 @@ export function ContactSection() {
                 ["email", "Email Address *", "email"],
                 ["phone", "Phone Number *", "tel"]
               ].map(([name, label, type]) => (
-                <input
-                  key={name}
-                  required
-                  name={name}
-                  type={type}
-                  placeholder={label}
-                  className="w-full rounded-lg border border-white/15 bg-white/8 px-4 py-3 text-sm text-white placeholder-white/40 outline-none transition focus:border-[var(--accent)] focus:bg-white/12 hover:border-white/25"
-                />
+                <div key={name}>
+                  <label className="block text-xs font-semibold text-white/70 mb-1.5 uppercase tracking-wider">{label}</label>
+                  <input
+                    required
+                    name={name}
+                    type={type}
+                    placeholder={label}
+                    className="w-full rounded-lg border border-white/20 bg-white/[0.12] backdrop-blur-sm px-4 py-3 text-sm text-white placeholder-white/40 outline-none transition focus:border-white/50 focus:bg-white/[0.18] hover:border-white/30"
+                  />
+                </div>
               ))}
-              <select
-                name="service"
-                className="w-full rounded-lg border border-white/15 bg-white/8 px-4 py-3 text-sm text-white/60 outline-none transition focus:border-[var(--accent)]"
-              >
-                <option value="" className="text-gray-800">Interested in</option>
-                <option className="text-gray-800">Study Abroad</option>
-                <option className="text-gray-800">Student Visa</option>
-                <option className="text-gray-800">Recruitment Services</option>
-                <option className="text-gray-800">IELTS / PTE Coaching</option>
-                <option className="text-gray-800">Tours &amp; Travels</option>
-              </select>
-              <textarea
-                required
-                name="message"
-                rows={3}
-                placeholder="Your Message *"
-                className="w-full resize-none rounded-lg border border-white/15 bg-white/8 px-4 py-3 text-sm text-white placeholder-white/40 outline-none transition focus:border-[var(--accent)] hover:border-white/25"
-              />
+              <div>
+                <label className="block text-xs font-semibold text-white/70 mb-1.5 uppercase tracking-wider">Service Interested In</label>
+                <select
+                  name="service"
+                  className="w-full rounded-lg border border-white/20 bg-white/[0.12] backdrop-blur-sm px-4 py-3 text-sm text-white outline-none transition focus:border-white/50 hover:border-white/30 appearance-none"
+                  style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='white' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
+                >
+                  <option value="" className="text-gray-800 bg-white">Select a service...</option>
+                  <option className="text-gray-800 bg-white">Study Abroad</option>
+                  <option className="text-gray-800 bg-white">Student Visa</option>
+                  <option className="text-gray-800 bg-white">Recruitment Services</option>
+                  <option className="text-gray-800 bg-white">IELTS / PTE Coaching</option>
+                  <option className="text-gray-800 bg-white">Tours &amp; Travels</option>
+                  <option className="text-gray-800 bg-white">Digital Media Services</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-semibold text-white/70 mb-1.5 uppercase tracking-wider">Your Message *</label>
+                <textarea
+                  required
+                  name="message"
+                  rows={3}
+                  placeholder="Tell us about your requirement..."
+                  className="w-full resize-none rounded-lg border border-white/20 bg-white/[0.12] backdrop-blur-sm px-4 py-3 text-sm text-white placeholder-white/40 outline-none transition focus:border-white/50 focus:bg-white/[0.18] hover:border-white/30"
+                />
+              </div>
               <motion.button
                 type="submit"
                 disabled={status === "sending"}

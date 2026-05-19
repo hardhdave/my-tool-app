@@ -145,16 +145,20 @@ export function CompanyPageClient({ data }: { data: CompanyPageData }) {
           </div>
         </section>
 
-        {/* ═══ GALLERY ═══ */}
-        <section className="relative z-[7] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-[var(--gray-50)] shadow-[0_-6px_30px_rgba(0,0,0,0.06)] py-20 sm:py-28 overflow-hidden">
-          <div className="section-shell px-4 relative z-10">
-            <SectionHeading label="EXPLORE" title="Gallery" />
-            <GalleryGrid gallery={data.gallery} />
-          </div>
-        </section>
+
+
+        {/* ═══ BLOG ═══ */}
+        {data.blog && (
+          <section className="relative z-[7] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-[var(--gray-50)] shadow-[0_-6px_30px_rgba(0,0,0,0.06)] py-20 sm:py-28 overflow-hidden">
+            <div className="section-shell px-4 relative z-10">
+              <SectionHeading label="FEATURED ARTICLE" title={data.blog.title} />
+              <BlogBlock blog={data.blog} />
+            </div>
+          </section>
+        )}
 
         {/* ═══ TESTIMONIALS ═══ */}
-        <section className="relative z-[8] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-white shadow-[0_-8px_40px_rgba(0,0,0,0.08)] py-20 sm:py-28 overflow-hidden">
+        <section className={`relative z-[8] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-white shadow-[0_-8px_40px_rgba(0,0,0,0.08)] py-20 sm:py-28 overflow-hidden`}>
           <MovingShapes variant="light" />
           <div className="section-shell px-4 relative z-10">
             <SectionHeading label="WHAT CLIENTS SAY" title="Testimonials" />
@@ -360,6 +364,43 @@ function CtaBlock({ data }: { data: CompanyPageData }) {
           <ArrowLeft className="h-4 w-4" /> Back to Home
         </Link>
       </motion.div>
+    </motion.div>
+  );
+}
+
+function BlogBlock({ blog }: { blog: NonNullable<CompanyPageData["blog"]> }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-60px" });
+  
+  return (
+    <motion.div ref={ref} className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden p-6 sm:p-10 lg:p-12 border border-[var(--gray-200)]"
+      initial={{ opacity: 0, y: 40 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
+      
+      <div className="flex flex-col items-center mb-10 text-center">
+        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[var(--teal)] to-[var(--blue)] flex items-center justify-center text-white mb-4 shadow-md">
+          <BookOpen className="h-7 w-7" />
+        </div>
+        <h3 className="font-display text-xl sm:text-2xl font-bold text-[var(--navy)]">By {blog.author}</h3>
+        <p className="text-sm font-semibold text-[var(--teal)] uppercase tracking-wider mt-1">{blog.authorRole}</p>
+      </div>
+
+      <div className="space-y-10">
+        {blog.sections.map((section, idx) => (
+          <div key={idx} className="relative">
+            <h4 className="font-display text-lg sm:text-xl font-bold text-[var(--navy)] mb-4 border-l-4 border-[var(--teal)] pl-4">
+              {section.heading}
+            </h4>
+            <div className="space-y-4">
+              {section.paragraphs.map((p, pIdx) => (
+                <p key={pIdx} className="text-sm sm:text-base text-[var(--text-muted)] leading-relaxed">
+                  {p}
+                </p>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      
     </motion.div>
   );
 }
