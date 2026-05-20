@@ -22,7 +22,7 @@ const quickLinks = [
   { label: "Contact us", href: "#contact" }
 ];
 
-export function Footer() {
+export function Footer({ companyLogoUrl }: { companyLogoUrl?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
@@ -50,7 +50,7 @@ export function Footer() {
             >
               <div className="flex items-center gap-3 mb-5">
                 <Image
-                  src="/logos/main-logo.jpg"
+                  src={companyLogoUrl || "/logos/main-logo.jpg"}
                   alt="PRANIL Group of Companies"
                   width={120}
                   height={56}

@@ -82,20 +82,20 @@ export function ContactSection() {
                 {
                   icon: Mail,
                   label: "EMAIL US",
-                  value: "hr@pranilrecruitment.com",
-                  href: "mailto:hr@pranilrecruitment.com"
+                  value: "inquiry.pranileducation@gmail.com",
+                  href: "mailto:inquiry.pranileducation@gmail.com"
                 },
                 {
                   icon: Phone,
                   label: "SPEAK WITH EXPERT",
-                  value: companyContacts.map(c => c.phone).join(" / "),
-                  href: `tel:${companyContacts[0].phone.replace(/[^+\d]/g, "")}`
+                  value: "+91 73839 97825 / +91 88499 48279",
+                  href: "tel:+917383997825"
                 },
                 {
                   icon: MessageSquare,
                   label: "CHAT WITH EXPERT",
-                  value: "+91 73839 97679",
-                  href: "https://wa.me/917383997679"
+                  value: "+91 73839 97825",
+                  href: "https://wa.me/917383997825"
                 },
                 {
                   icon: MapPinned,
@@ -175,6 +175,7 @@ export function ContactSection() {
                   <option className="text-gray-800 bg-white">Student Visa</option>
                   <option className="text-gray-800 bg-white">Recruitment Services</option>
                   <option className="text-gray-800 bg-white">IELTS / PTE Coaching</option>
+                  <option className="text-gray-800 bg-white">Spoken English</option>
                   <option className="text-gray-800 bg-white">Tours &amp; Travels</option>
                   <option className="text-gray-800 bg-white">Digital Media Services</option>
                 </select>

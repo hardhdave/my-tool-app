@@ -80,7 +80,11 @@ export function BrochureServicesSection() {
                       )}
                     </p>
                   )}
-                  {company.website && <p className="mt-1 text-xs text-gray-500">{company.website}</p>}
+                  {'phone2' in company && company.phone2 && (
+                    <p className="mt-1 text-sm font-bold text-[#d42a36]">
+                      <a href={`tel:${company.phone2.replace(/[^+\d]/g, "")}`} className="hover:underline">{company.phone2}</a>
+                    </p>
+                  )}
                 </div>
               </Reveal>
             ))}

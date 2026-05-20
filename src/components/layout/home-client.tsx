@@ -8,6 +8,7 @@ import { ValuesSection } from "@/components/sections/values-section";
 import { VisionSection } from "@/components/sections/vision-section";
 import { GallerySection } from "@/components/sections/gallery-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
+import { BlogSection } from "@/components/sections/blog-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { ContactSection } from "@/components/sections/contact-section";
 
@@ -69,11 +70,18 @@ export function HomeClient() {
           className="relative z-[7] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-[var(--gray-50)] shadow-[0_-8px_40px_rgba(0,0,0,0.08)]"
           style={{ willChange: "transform" }}
         >
+          <BlogSection />
+        </section>
+
+        <section
+          className="relative z-[8] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-white shadow-[0_-8px_40px_rgba(0,0,0,0.08)]"
+          style={{ willChange: "transform" }}
+        >
           <FaqSection />
         </section>
 
         <section
-          className="relative z-[8] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-[var(--gray-50)] shadow-[0_-8px_40px_rgba(0,0,0,0.1)]"
+          className="relative z-[9] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-[var(--gray-50)] shadow-[0_-8px_40px_rgba(0,0,0,0.1)]"
           style={{ willChange: "transform" }}
         >
           <ContactSection />

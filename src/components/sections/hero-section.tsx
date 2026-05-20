@@ -105,19 +105,9 @@ export function HeroSection() {
                   <TypewriterText text={heroContent.line2} delay={1200} />
                 </span>
                 <span className="block mt-1 sm:mt-2">
-                  <motion.span
-                    className="text-transparent bg-clip-text"
-                    style={{
-                      backgroundImage: "linear-gradient(135deg, #FFD700, #FF8C00, #FF6347, #FFD700)",
-                      backgroundSize: "300% 300%"
-                    }}
-                    animate={{
-                      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
-                    }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                  >
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ffb703] to-[#fb8500]">
                     <TypewriterText text={heroContent.line3} delay={2100} className="italic" />
-                  </motion.span>
+                  </span>
                 </span>
               </h1>
             </motion.div>

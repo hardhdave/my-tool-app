@@ -10,7 +10,7 @@ export function ValuesSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-20 sm:py-28 bg-white relative overflow-hidden">
+    <section id="about" className="py-20 sm:py-28 bg-white relative overflow-hidden">
       {/* Moving decorations */}
       <MovingShapes variant="light" />
 

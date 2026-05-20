@@ -174,7 +174,7 @@ export function CompanyPageClient({ data }: { data: CompanyPageData }) {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer companyLogoUrl={data.logoUrl || undefined} />
     </>
   );
 }
@@ -349,14 +349,20 @@ function CtaBlock({ data }: { data: CompanyPageData }) {
       animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7 }}>
       <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">{data.ctaTitle}</h2>
       <p className="text-base text-white/70 leading-relaxed mb-8">{data.ctaDescription}</p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <div className="flex flex-wrap gap-4 justify-center">
         <a href={`tel:${data.phone.replace(/[^+\d]/g, "")}`}
-          className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-8 py-3.5 text-sm font-bold text-[var(--navy)] shadow-lg hover:scale-[1.03] transition-all">
-          <Phone className="h-4 w-4" /> {data.phone}
+          className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-3.5 text-sm font-bold text-[var(--navy)] shadow-lg hover:scale-[1.03] transition-all whitespace-nowrap">
+          <Phone className="h-4 w-4 shrink-0" /> {data.phone}
         </a>
+        {data.phone2 && (
+          <a href={`tel:${data.phone2.replace(/[^+\d]/g, "")}`}
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-3.5 text-sm font-bold text-[var(--navy)] shadow-lg hover:scale-[1.03] transition-all whitespace-nowrap">
+            <Phone className="h-4 w-4 shrink-0" /> {data.phone2}
+          </a>
+        )}
         <a href={`mailto:${data.email}`}
-          className="inline-flex items-center justify-center gap-2 rounded-lg bg-white/10 border border-white/20 px-8 py-3.5 text-sm font-bold text-white hover:bg-white/20 transition-all">
-          <Mail className="h-4 w-4" /> {data.email}
+          className="inline-flex items-center justify-center gap-2 rounded-lg bg-white/10 border border-white/20 px-6 py-3.5 text-sm font-bold text-white hover:bg-white/20 transition-all whitespace-nowrap">
+          <Mail className="h-4 w-4 shrink-0" /> {data.email}
         </a>
       </div>
       <motion.div className="mt-8" initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.5 }}>

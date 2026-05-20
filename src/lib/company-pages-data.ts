@@ -19,6 +19,7 @@ export interface CompanyPageData {
   ctaTitle: string;
   ctaDescription: string;
   phone: string;
+  phone2?: string;
   email: string;
   blog?: {
     title: string;
@@ -101,8 +102,9 @@ export const companyPages: Record<string, CompanyPageData> = {
     ],
     ctaTitle: "Start Your Study Abroad Journey Today",
     ctaDescription: "Book a FREE counselling session with our expert education consultants.",
-    phone: "+91 73839 97679",
-    email: "info@pranileducation.in"
+    phone: "+91 73839 97825",
+    phone2: "+91 88499 48279",
+    email: "inquiry.pranileducation@gmail.com"
   },
 
   recruitment: {
@@ -174,7 +176,7 @@ export const companyPages: Record<string, CompanyPageData> = {
     ],
     ctaTitle: "Find Your Dream Job - For Free",
     ctaDescription: "Register with PRANIL Recruitment Services today. Zero fees, expert guidance, and verified opportunities.",
-    phone: "+91 73832 99556",
+    phone: "+91 87800 48502",
     email: "hr@pranilrecruitment.com"
   },
 
@@ -250,8 +252,8 @@ export const companyPages: Record<string, CompanyPageData> = {
     ],
     ctaTitle: "Plan Your Dream Vacation Today",
     ctaDescription: "Get a customized itinerary and the best deals on flights, hotels, and tour packages.",
-    phone: "+91 73833 69769",
-    email: "travel@pranilgroup.com"
+    phone: "+91 88499 48279",
+    email: "admin@pranileducation.com"
   },
 
   "digital-media": {
@@ -259,7 +261,7 @@ export const companyPages: Record<string, CompanyPageData> = {
     name: "Digital Media",
     fullName: "KARV Digital Media & Event Solutions",
     tagline: "We Don't Just Market — We Build Legacies",
-    logoUrl: "/logos/karv-logo.jpg",
+    logoUrl: "/logos/karv-logo.png",
     color: "#0077B6",
     accentColor: "#00B4D8",
     heroImage: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=2000&q=90",
@@ -324,53 +326,9 @@ export const companyPages: Record<string, CompanyPageData> = {
       { quote: "KARV created captivating flyers, engaging videos, and dynamic reels for Pranil Tours and Travels, showcasing unforgettable travel experiences with inspiring storytelling.", name: "Pranil Tours & Travels", role: "Client — Travel" },
       { quote: "Through strategic digital content, KARV helped enhance our brand visibility, attract customers, and build a strong digital presence with measurable results.", name: "KARV Client", role: "Digital Marketing" }
     ],
-    blog: {
-      title: "From Ahmedabad to the World: Building Global Careers with Trust and Transparency",
-      author: "Komal Tiwari",
-      authorRole: "Director of Pranil Education Services LLP",
-      sections: [
-        {
-          heading: "The True Cost of 'Free' Advice",
-          paragraphs: [
-            "We have met many students who came to us after their visas were rejected. When we look at their cases, the reason is rarely a lack of ability or funds. It is usually poor decisions made at the wrong time.",
-            "Some of the most common mistakes include trusting unauthorized or inexperienced agents, believing in 'guaranteed visa' promises, choosing the wrong courses just for quick approval, ignoring proper financial planning, and submitting incomplete or incorrect documents.",
-            "These mistakes can cost not just money—but also time, confidence, and future opportunities. In many cases, they delay dreams that could have been achieved with the right guidance."
-          ]
-        },
-        {
-          heading: "Our Approach: Honest Guidance Over False Promises",
-          paragraphs: [
-            "We follow a very simple rule: If it is not right for you, we will not suggest it. This sometimes means saying 'no' to clients, even when it may seem like a lost opportunity in the short term. But in the long run, this approach protects their future and builds trust that lasts.",
-            "Our process includes detailed profile analysis, clear explanation of risks and opportunities, step-by-step documentation support, and continuous communication and updates.",
-            "We don't believe in creating pressure—we believe in building clarity. When people understand the process, they make better decisions."
-          ]
-        },
-        {
-          heading: "A Woman Entrepreneur's Journey",
-          paragraphs: [
-            "As a woman entrepreneur managing multiple businesses—education, recruitment, travel, and digital media—the journey has not been easy. There have been moments of uncertainty, financial challenges, and situations that tested both patience and resilience.",
-            "However, these experiences have also shaped a deeper understanding of people's struggles. Today, when clients walk in feeling confused or stressed, I don't just see them as customers—I understand their situation, their pressure, and the expectations they carry. And that perspective makes all the difference in how we guide them."
-          ]
-        },
-        {
-          heading: "Ahmedabad's Youth: Full of Potential",
-          paragraphs: [
-            "Ahmedabad has incredible talent. The youth here are hardworking, ambitious, and eager to explore global opportunities. They have the ability to compete internationally, but often lack the right direction and guidance.",
-            "What they truly need is the right direction, genuine opportunities, transparent guidance, and emotional support during the process. With the right approach, Ahmedabad has the potential to become a strong contributor to the global workforce."
-          ]
-        },
-        {
-          heading: "A Message to Every Dreamer",
-          paragraphs: [
-            "If you are planning to study or work abroad, remember this: Don't rush decisions, don't fall for shortcuts, don't trust blindly, ask questions and understand the process, choose long-term success over quick results.",
-            "Your journey is important—treat it with care and responsibility."
-          ]
-        }
-      ]
-    },
     ctaTitle: "Elevate Your Brand Today",
     ctaDescription: "Transform your brand with cutting-edge digital media, creative designs, and result-driven marketing strategies. At KARV, we don't just market — we build legacies.",
-    phone: "+91 73839 97679",
+    phone: "+91 63538 18174",
     email: "info@karvdigital.com"
   }
 };
