@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/motion/reveal";
 
 export function SectionHeading({
@@ -14,7 +15,7 @@ export function SectionHeading({
   return (
     <Reveal className="mx-auto mb-10 max-w-3xl px-2 sm:mb-14">
       {logoUrl ? (
-        <img src={logoUrl} alt={eyebrow || "Logo"} className="mb-6 h-20 sm:h-24 w-auto object-contain drop-shadow-sm" />
+        <Image src={logoUrl} alt={eyebrow || "Logo"} width={200} height={96} className="mb-6 h-20 sm:h-24 w-auto object-contain drop-shadow-sm" />
       ) : eyebrow ? (
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.25em] text-[#d42a36] sm:text-sm">{eyebrow}</p>
       ) : null}

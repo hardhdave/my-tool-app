@@ -87,13 +87,16 @@ export function FloatingParticles({ count = 30, className = "" }: { count?: numb
     createParticles();
     drawParticles();
 
-    window.addEventListener("resize", () => {
+    const handleResize = () => {
       resize();
       createParticles();
-    });
+    };
+
+    window.addEventListener("resize", handleResize);
 
     return () => {
       cancelAnimationFrame(animationFrame);
+      window.removeEventListener("resize", handleResize);
     };
   }, [count]);
 

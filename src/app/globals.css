@@ -64,6 +64,36 @@ body {
 .section-shell {
   margin-inline: auto;
   width: min(100% - 2rem, 78rem);
+  /* Safe area for notched phones (iPhone X+) */
+  padding-left: max(0px, env(safe-area-inset-left));
+  padding-right: max(0px, env(safe-area-inset-right));
+}
+
+/* ── Mobile touch improvements ── */
+@supports (-webkit-touch-callout: none) {
+  /* Fix 100vh issue on mobile Safari */
+  body {
+    min-height: -webkit-fill-available;
+  }
+  html {
+    height: -webkit-fill-available;
+  }
+}
+
+/* Remove tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure touch targets are accessible (min 44px) */
+a, button {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Fix for mobile position:fixed elements behind safe areas */
+.fixed {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 /* ── Card styles ── */
@@ -305,7 +335,14 @@ body {
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .section-shell {
-    width: min(100% - 1rem, 78rem);
+    width: min(100% - 1.25rem, 78rem);
+  }
+  /* Smaller card padding on mobile */
+  .company-card {
+    padding: 1.25rem 1rem;
+  }
+  .value-card {
+    padding: 1.5rem 1rem;
   }
 }
 

@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { navItems, companyContacts, companyAddress } from "@/lib/site-data";
 import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram, ArrowUp } from "lucide-react";
+import Image from "next/image";
 
 const companyLinks = [
   "Pranil Education",
@@ -48,9 +49,11 @@ export function Footer() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-3 mb-5">
-                <img
+                <Image
                   src="/logos/main-logo.jpg"
                   alt="PRANIL Group of Companies"
+                  width={120}
+                  height={56}
                   className="h-14 w-auto rounded-md bg-white p-1.5"
                 />
               </div>
@@ -174,7 +177,8 @@ export function Footer() {
       {/* Scroll to top button */}
       <motion.button
         onClick={scrollToTop}
-        className="fixed bottom-6 left-6 z-50 grid h-10 w-10 place-items-center rounded-full bg-[var(--navy)] text-white shadow-lg hover:bg-[var(--teal)] transition-all duration-300"
+        className="fixed z-50 grid h-10 w-10 place-items-center rounded-full bg-[var(--navy)] text-white shadow-lg hover:bg-[var(--teal)] transition-all duration-300"
+        style={{ bottom: 'max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 1.5rem))', left: '1.5rem' }}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 3 }}

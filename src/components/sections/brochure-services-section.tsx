@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { coachingServices, companyContacts, visaProcessServices } from "@/lib/site-data";
 import { Reveal } from "@/components/motion/reveal";
@@ -59,7 +60,7 @@ export function BrochureServicesSection() {
                 <div className="flex min-w-[16rem] shrink-0 snap-start flex-col rounded-xl border border-gray-200 bg-white p-5 shadow-sm sm:min-w-0 sm:p-6 transition hover:shadow-md hover:-translate-y-1">
                   {company.logoUrl ? (
                     <div className="flex items-center justify-start mb-4 h-16 sm:h-20">
-                      <img src={company.logoUrl} alt={company.short} className="max-h-full max-w-[80%] object-contain object-left" />
+                      <Image src={company.logoUrl} alt={company.short} width={160} height={80} className="max-h-full max-w-[80%] object-contain object-left" />
                     </div>
                   ) : (
                     <span className="grid h-11 w-11 place-items-center rounded-lg bg-[#1a1a6e] text-xs font-black text-white mb-4">

@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, Phone, X, Mail } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { navItems } from "@/lib/site-data";
+import Image from "next/image";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -50,10 +51,13 @@ export function Navbar() {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
-            <img
+            <Image
               src="/logos/main-logo.jpg"
               alt="PRANIL Group of Companies"
+              width={200}
+              height={64}
               className={`transition-all duration-300 ${scrolled ? "h-10 sm:h-12 lg:h-14" : "h-12 sm:h-14 lg:h-16"} w-auto object-contain`}
+              priority
             />
           </motion.a>
 
@@ -106,7 +110,8 @@ export function Navbar() {
 
       {/* ─── WhatsApp Floating Button ─── */}
       <motion.div
-        className="fixed bottom-6 right-6 z-50"
+        className="fixed z-50"
+        style={{ bottom: 'max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 1.5rem))', right: '1.5rem' }}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 2, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}

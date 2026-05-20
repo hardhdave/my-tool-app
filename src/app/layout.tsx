@@ -1,9 +1,19 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { SmoothScroll } from "@/components/motion/smooth-scroll";
 import "./globals.css";
 
 const siteUrl = "https://pranilgroup.com";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#062a4d" }
+  ]
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -68,6 +78,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   return (
     <html lang="en">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="PRANIL Group" />
+        <link rel="apple-touch-icon" href="/icon.jpg" />
+      </head>
       <body>
         <SmoothScroll />
         {children}
