@@ -82,20 +82,20 @@ export function ContactSection() {
                 {
                   icon: Mail,
                   label: "EMAIL US",
-                  value: "inquiry.pranileducation@gmail.com",
-                  href: "mailto:inquiry.pranileducation@gmail.com"
+                  value: "admission@pranileducation.com",
+                  href: "mailto:admission@pranileducation.com"
                 },
                 {
                   icon: Phone,
                   label: "SPEAK WITH EXPERT",
-                  value: "+91 73839 97825 / +91 88499 48279",
-                  href: "tel:+917383997825"
+                  value: "+91 88499 48279",
+                  href: "tel:+918849948279"
                 },
                 {
                   icon: MessageSquare,
                   label: "CHAT WITH EXPERT",
-                  value: "+91 73839 97825",
-                  href: "https://wa.me/917383997825"
+                  value: "+91 88499 48279",
+                  href: "https://wa.me/918849948279"
                 },
                 {
                   icon: MapPinned,

@@ -455,32 +455,11 @@ export const visaProcessServices = [
 
 export const companyContacts = [
   {
-    label: "PRANIL Education Services",
-    short: "PES",
+    label: "PRANIL Group of Companies",
+    short: "PRANIL",
     logoUrl: "/logos/main-logo.jpg",
-    phone: "+91 73839 97825",
-    phone2: "+91 88499 48279",
-    email: "inquiry.pranileducation@gmail.com"
-  },
-  {
-    label: "PRANIL Tours & Travels",
-    short: "PTT",
-    logoUrl: "/logos/travel-logo.png",
     phone: "+91 88499 48279",
-    email: "admin@pranileducation.com"
-  },
-  {
-    label: "PRANIL Recruitment Services",
-    short: "PRS",
-    logoUrl: "/logos/recruitment-logo.png",
-    phone: "+91 87800 48502",
-    email: "hr@pranilrecruitment.com"
-  },
-  {
-    label: "KARV Digital Media",
-    short: "KARV",
-    logoUrl: "/logos/karv-logo.png",
-    phone: "+91 63538 18174"
+    email: "admission@pranileducation.com"
   }
 ];
 

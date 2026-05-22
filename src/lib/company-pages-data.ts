@@ -102,9 +102,8 @@ export const companyPages: Record<string, CompanyPageData> = {
     ],
     ctaTitle: "Start Your Study Abroad Journey Today",
     ctaDescription: "Book a FREE counselling session with our expert education consultants.",
-    phone: "+91 73839 97825",
-    phone2: "+91 88499 48279",
-    email: "inquiry.pranileducation@gmail.com"
+    phone: "+91 88499 48279",
+    email: "admission@pranileducation.com"
   },
 
   recruitment: {
@@ -176,8 +175,8 @@ export const companyPages: Record<string, CompanyPageData> = {
     ],
     ctaTitle: "Find Your Dream Job - For Free",
     ctaDescription: "Register with PRANIL Recruitment Services today. Zero fees, expert guidance, and verified opportunities.",
-    phone: "+91 87800 48502",
-    email: "hr@pranilrecruitment.com"
+    phone: "+91 88499 48279",
+    email: "admission@pranileducation.com"
   },
 
   travel: {
@@ -253,7 +252,7 @@ export const companyPages: Record<string, CompanyPageData> = {
     ctaTitle: "Plan Your Dream Vacation Today",
     ctaDescription: "Get a customized itinerary and the best deals on flights, hotels, and tour packages.",
     phone: "+91 88499 48279",
-    email: "admin@pranileducation.com"
+    email: "admission@pranileducation.com"
   },
 
   "digital-media": {
@@ -328,8 +327,8 @@ export const companyPages: Record<string, CompanyPageData> = {
     ],
     ctaTitle: "Elevate Your Brand Today",
     ctaDescription: "Transform your brand with cutting-edge digital media, creative designs, and result-driven marketing strategies. At KARV, we don't just market — we build legacies.",
-    phone: "+91 63538 18174",
-    email: "info@karvdigital.com"
+    phone: "+91 88499 48279",
+    email: "admission@pranileducation.com"
   }
 };
 

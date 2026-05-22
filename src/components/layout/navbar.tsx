@@ -117,7 +117,7 @@ export function Navbar() {
         transition={{ delay: 2, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
       >
         <a
-          href="https://wa.me/917383997825"
+          href="https://wa.me/918849948279"
           target="_blank"
           rel="noopener noreferrer"
           className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300"
@@ -155,8 +155,8 @@ export function Navbar() {
               ))}
             </nav>
             <div className="mt-auto space-y-3 pt-6">
-              <a href="tel:+917383997825" className="flex items-center gap-2 text-sm font-bold text-[var(--navy)]">
-                <Phone className="h-4 w-4 text-[var(--teal)]" /> +91 73839 97825
+              <a href="tel:+918849948279" className="flex items-center gap-2 text-sm font-bold text-[var(--navy)]">
+                <Phone className="h-4 w-4 text-[var(--teal)]" /> +91 88499 48279
               </a>
               <a href="#contact" onClick={close} className="block w-full rounded-lg bg-gradient-to-r from-[var(--teal)] to-[var(--blue)] py-3.5 text-center text-sm font-bold text-white shadow-lg">
                 Get in Touch

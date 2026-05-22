@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { navItems, companyContacts, companyAddress } from "@/lib/site-data";
+import { navItems, companyAddress } from "@/lib/site-data";
 import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram, ArrowUp } from "lucide-react";
 import Image from "next/image";
 
@@ -132,17 +132,24 @@ export function Footer({ companyLogoUrl }: { companyLogoUrl?: string }) {
             >
               <h4 className="text-sm font-bold text-white mb-5 tracking-wider uppercase">Contact Us</h4>
               <div className="space-y-4">
-                {companyContacts.slice(0, 2).map((c) => (
-                  <div key={c.label} className="flex items-start gap-3">
-                    <Phone className="h-4 w-4 text-[var(--teal-light)] mt-0.5 shrink-0" />
-                    <div>
-                      <p className="text-xs text-white/40 font-medium">{c.label}</p>
-                      <a href={`tel:${c.phone.replace(/[^+\d]/g, "")}`} className="text-sm text-white/70 hover:text-white transition">
-                        {c.phone}
-                      </a>
-                    </div>
+                <div className="flex items-start gap-3">
+                  <Phone className="h-4 w-4 text-[var(--teal-light)] mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-xs text-white/40 font-medium">Phone</p>
+                    <a href="tel:+918849948279" className="text-sm text-white/70 hover:text-white transition">
+                      +91 88499 48279
+                    </a>
                   </div>
-                ))}
+                </div>
+                <div className="flex items-start gap-3">
+                  <Mail className="h-4 w-4 text-[var(--teal-light)] mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-xs text-white/40 font-medium">Email</p>
+                    <a href="mailto:admission@pranileducation.com" className="text-sm text-white/70 hover:text-white transition">
+                      admission@pranileducation.com
+                    </a>
+                  </div>
+                </div>
                 <div className="flex items-start gap-3">
                   <MapPin className="h-4 w-4 text-[var(--teal-light)] mt-0.5 shrink-0" />
                   <p className="text-xs text-white/40 leading-5">{companyAddress}</p>
