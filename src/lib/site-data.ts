@@ -20,12 +20,12 @@ import {
 } from "lucide-react";
 
 export const navItems = [
-  { label: "Home", href: "#" },
-  { label: "About Us", href: "#about" },
-  { label: "Our Companies", href: "#companies" },
-  { label: "Our Vision", href: "#vision" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact Us", href: "#contact" }
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/#about" },
+  { label: "Our Companies", href: "/#companies" },
+  { label: "Our Vision", href: "/#vision" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact Us", href: "/#contact" }
 ];
 
 /* ── Hero content ── */

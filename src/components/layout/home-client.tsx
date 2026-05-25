@@ -6,7 +6,6 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { CompaniesSection } from "@/components/sections/companies-section";
 import { ValuesSection } from "@/components/sections/values-section";
 import { VisionSection } from "@/components/sections/vision-section";
-import { GallerySection } from "@/components/sections/gallery-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { BlogSection } from "@/components/sections/blog-section";
 import { FaqSection } from "@/components/sections/faq-section";
@@ -53,35 +52,28 @@ export function HomeClient() {
         </section>
 
         <section
-          className="relative z-[5] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-white shadow-[0_-8px_40px_rgba(0,0,0,0.08)]"
-          style={{ willChange: "transform" }}
-        >
-          <GallerySection />
-        </section>
-
-        <section
-          className="relative z-[6] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-white shadow-[0_-6px_30px_rgba(0,0,0,0.06)]"
+          className="relative z-[5] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-white shadow-[0_-6px_30px_rgba(0,0,0,0.06)]"
           style={{ willChange: "transform" }}
         >
           <TestimonialsSection />
         </section>
 
         <section
-          className="relative z-[7] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-[var(--gray-50)] shadow-[0_-8px_40px_rgba(0,0,0,0.08)]"
+          className="relative z-[6] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-[var(--gray-50)] shadow-[0_-8px_40px_rgba(0,0,0,0.08)]"
           style={{ willChange: "transform" }}
         >
           <BlogSection />
         </section>
 
         <section
-          className="relative z-[8] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-white shadow-[0_-8px_40px_rgba(0,0,0,0.08)]"
+          className="relative z-[7] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-white shadow-[0_-8px_40px_rgba(0,0,0,0.08)]"
           style={{ willChange: "transform" }}
         >
           <FaqSection />
         </section>
 
         <section
-          className="relative z-[9] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-[var(--gray-50)] shadow-[0_-8px_40px_rgba(0,0,0,0.1)]"
+          className="relative z-[8] -mt-6 rounded-t-[2rem] sm:rounded-t-[3rem] bg-[var(--gray-50)] shadow-[0_-8px_40px_rgba(0,0,0,0.1)]"
           style={{ willChange: "transform" }}
         >
           <ContactSection />

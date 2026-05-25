@@ -14,12 +14,12 @@ const companyLinks = [
 ];
 
 const quickLinks = [
-  { label: "Home", href: "#" },
-  { label: "About Us", href: "#about" },
-  { label: "Our Companies", href: "#companies" },
-  { label: "Our Vision", href: "#vision" },
-  { label: "News & Events", href: "#news" },
-  { label: "Contact us", href: "#contact" }
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/#about" },
+  { label: "Our Companies", href: "/#companies" },
+  { label: "Our Vision", href: "/#vision" },
+  { label: "News & Events", href: "/#news" },
+  { label: "Contact us", href: "/#contact" }
 ];
 
 export function Footer({ companyLogoUrl }: { companyLogoUrl?: string }) {
